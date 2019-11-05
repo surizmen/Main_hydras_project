@@ -42,7 +42,7 @@ class m191105_093355_create_review_table extends Migration
             'CASCADE'
         );
 
-        // creates index for column `author_id`
+        // creates index for column `author_id`м
         $this->createIndex(
             '{{%idx-review-author_id}}',
             '{{%review}}',
