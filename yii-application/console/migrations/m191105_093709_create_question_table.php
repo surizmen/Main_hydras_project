@@ -16,10 +16,10 @@ class m191105_093709_create_question_table extends Migration
     public function safeUp()
     {
         $this->createTable('{{%question}}', [
-            'id' => $this->primaryKey(),
-            'theme' => $this->text(),
-            'description' => $this->text(),
-            'status' => $this->integer(16),
+            'id' => $this->primaryKey()->notNull(),
+            'theme' => $this->text()->notNull(),
+            'description' => $this->text()->notNull(),
+            'status' => $this->integer(16)->notNull(),
             'user_id' => $this->integer()->notNull(),
         ]);
 

@@ -18,7 +18,7 @@ class m191105_094006_create_collection_table extends Migration
     {
         $this->createTable('{{%collection}}', [
             'id' => $this->primaryKey(),
-            'product_href' => $this->text(),
+            'product_href' => $this->text()->notNull(),
             'user_id' => $this->integer()->notNull(),
             'product_id' => $this->integer()->notNull(),
         ]);
